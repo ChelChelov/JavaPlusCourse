@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Team {
+public class Team <T extends Participant> {
     private String name;
-    private List<Participant> participants = new ArrayList<>();
+    private List<T> participants = new ArrayList<>();
 
     public Team(String name) {
         this.name = name;
     }
 
-    public void addNewParticipant(Participant p){
+    public void addNewParticipant(T p){
         participants.add(p);
         System.out.println("To the team " + name + " was added the new participant by the name "
         + p.getName());
     }
 
-    public void playWith(Team team){
+    public void playWith(Team<T> team){
         String winnerName;
         Random random = new Random();
         int i = random.nextInt(2);
