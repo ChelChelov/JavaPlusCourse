@@ -26,7 +26,7 @@ public class BinarySearch {
         System.out.println(arrayList);
         Collections.shuffle(arrayList);
         System.out.println(arrayList);
-        
+
 
 //        int index1 = Collections.binarySearch(arrayList, 12);
 //        System.out.println(index1);
